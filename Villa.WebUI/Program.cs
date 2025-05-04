@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
+using System.Reflection;
 using Villa.Business.Abstract;
 using Villa.Business.Concrete;
 using Villa.DataAccess.Abstract;
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddServiceExtensions();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var mongoDatabase = new MongoClient(builder.Configuration.GetConnectionString("MongoConnection"))
     .GetDatabase(builder.Configuration.GetSection("DatabaseName").Value);
