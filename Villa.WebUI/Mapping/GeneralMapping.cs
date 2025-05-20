@@ -53,9 +53,9 @@ namespace Villa.WebUI.Mapping
             CreateMap<CreateVideoDto, Video>().ReverseMap();
             CreateMap<UpdateVideoDto, Video>().ReverseMap();
 
-          /*  CreateMap<ResultSubHeaderDto, SubHeader>().ReverseMap();
+            CreateMap<ResultSubHeaderDto, SubHeader>().ReverseMap();
             CreateMap<CreateSubHeaderDto, SubHeader>().ReverseMap();
-            CreateMap<UpdateSubHeaderDto, SubHeader>().ReverseMap(); */
+            CreateMap<UpdateSubHeaderDto, SubHeader>().ReverseMap();
 
         }
     }
